@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E4ED936238F85BE00081E59 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4ED935238F85BE00081E59 /* ModalViewController.swift */; };
 		1E750F9C238E662000719DD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E750F9B238E662000719DD6 /* AppDelegate.swift */; };
 		1E750F9E238E662000719DD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E750F9D238E662000719DD6 /* SceneDelegate.swift */; };
 		1E750FA0238E662000719DD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E750F9F238E662000719DD6 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E4ED935238F85BE00081E59 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		1E750F98238E662000719DD6 /* Guess Your Card.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guess Your Card.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E750F9B238E662000719DD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E750F9D238E662000719DD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				1E750F9D238E662000719DD6 /* SceneDelegate.swift */,
 				1E750F9F238E662000719DD6 /* ViewController.swift */,
 				1E750FA1238E662000719DD6 /* Main.storyboard */,
+				1E4ED935238F85BE00081E59 /* ModalViewController.swift */,
 				1E750FA4238E662300719DD6 /* Assets.xcassets */,
 				1E750FA6238E662300719DD6 /* LaunchScreen.storyboard */,
 				1E750FA9238E662300719DD6 /* Info.plist */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E4ED936238F85BE00081E59 /* ModalViewController.swift in Sources */,
 				1E750FA0238E662000719DD6 /* ViewController.swift in Sources */,
 				1E750F9C238E662000719DD6 /* AppDelegate.swift in Sources */,
 				1E750F9E238E662000719DD6 /* SceneDelegate.swift in Sources */,

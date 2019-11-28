@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     let img3 = UIImage(named: "4")
     let quesMark = UIImage(named: "questionMark")
     
-    var selected = 0, activeImage = 0 , random = 0, currentScore = 0, currentTires = 0
+    var selected = 0, activeImage = 0 , random = 0, currentScore = 0, currentTires = 0, counter = 1, totalTries = 10
     
     @IBOutlet weak var tries: UILabel!
     @IBOutlet weak var score: UILabel!
@@ -23,42 +23,57 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        score.text = "0"
-        tries.text = String(5)
+        score.text = String(currentScore)
+        tries.text = String(totalTries)
+        
+        
         
     }
 
     @IBAction func cardAction(_ sender: UIButton) {
-        random = Int(arc4random_uniform(4))
-        if sender.tag == random {
-            currentScore += 1
-            score.text = String(currentScore)
-        }else {
-            if currentScore == 0 {
-                currentScore = 0
+            if counter < totalTries {
+                random = Int(arc4random_uniform(4))
+                if sender.tag == random {
+                    currentScore += 1
+                    score.text = String(currentScore)
+                }
+                
+                if random == 0 {
+                    imageView.image = img0
+                }else if random == 1 {
+                    imageView.image = img1
+                }else if random == 2 {
+                    imageView.image = img2
+                }else {
+                    imageView.image = img3
+                }
+                currentTires = totalTries - counter
+                tries.text = String(currentTires)
+                UIView.transition(with: imageView, duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+                    self.imageView.image = self.quesMark
+                    UIView.transition(with: self.imageView, duration: 0.5, options: .transitionFlipFromRight, animations: nil, completion: nil)
+                })
             }else {
-                currentScore -= 1
+                showSimpleAlert()
+                currentScore = 0
+                score.text = String(currentScore)
+                tries.text = String(totalTries)
+                counter = 0
             }
-        }
-        
-        if random == 0 {
-            imageView.image = img0
-        }else if random == 1 {
-            imageView.image = img1
-        }else if random == 2 {
-            imageView.image = img2
-        }else {
-            imageView.image = img3
-        }
+            counter += 1
         
         
-        UIView.transition(with: imageView, duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+    }
+    func showSimpleAlert() {
+        let alert = UIAlertController(title: "Game Over", message: "Your Score is \(currentScore)", preferredStyle: UIAlertController.Style.alert)
+
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { _ in
+            //Cancel Action
+        }))
         
-  
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
-            self.imageView.image = self.quesMark
-            UIView.transition(with: self.imageView, duration: 0.5, options: .transitionFlipFromRight, animations: nil, completion: nil)
-        })
+        self.present(alert, animated: true, completion: nil)
     }
     
 }

@@ -28,7 +28,6 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="Drn-q2-eEU" firstAttribute="centerX" secondItem="grS-17-jPg" secondAttribute="centerX" id="Ioe-Q2-JJ1"/>
                                             <constraint firstItem="Drn-q2-eEU" firstAttribute="centerY" secondItem="grS-17-jPg" secondAttribute="centerY" id="zo7-sg-hab"/>
@@ -97,7 +96,6 @@
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="K7s-8Q-3TN" firstAttribute="bottom" secondItem="f7r-D0-OpV" secondAttribute="bottomMargin" id="2A0-w0-K3u"/>
                                             <constraint firstItem="k96-AG-Reu" firstAttribute="leading" secondItem="f7r-D0-OpV" secondAttribute="leading" constant="157" id="2Bh-bO-UBJ"/>
@@ -143,7 +141,6 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="gej-so-FGa" firstAttribute="centerX" secondItem="sFA-Ga-Rn0" secondAttribute="centerX" id="AvF-ma-zV4"/>
                                             <constraint firstItem="gej-so-FGa" firstAttribute="centerY" secondItem="sFA-Ga-Rn0" secondAttribute="centerY" id="tpy-5I-oad"/>
@@ -154,14 +151,16 @@
                                     <constraint firstItem="f7r-D0-OpV" firstAttribute="top" secondItem="grS-17-jPg" secondAttribute="bottom" id="4h6-fO-OBa"/>
                                     <constraint firstItem="grS-17-jPg" firstAttribute="top" secondItem="BbZ-do-Osa" secondAttribute="top" id="86V-8z-8Mv"/>
                                     <constraint firstAttribute="trailing" secondItem="sFA-Ga-Rn0" secondAttribute="trailing" id="CfG-Xu-guf"/>
+                                    <constraint firstItem="f7r-D0-OpV" firstAttribute="height" secondItem="grS-17-jPg" secondAttribute="height" id="KtO-6s-nhJ"/>
                                     <constraint firstItem="sFA-Ga-Rn0" firstAttribute="leading" secondItem="BbZ-do-Osa" secondAttribute="leading" id="Weg-QH-krf"/>
+                                    <constraint firstItem="sFA-Ga-Rn0" firstAttribute="height" secondItem="grS-17-jPg" secondAttribute="height" id="b0g-Hl-AF9"/>
                                     <constraint firstAttribute="bottom" secondItem="sFA-Ga-Rn0" secondAttribute="bottom" id="eb6-pY-jSu"/>
                                     <constraint firstItem="sFA-Ga-Rn0" firstAttribute="top" secondItem="f7r-D0-OpV" secondAttribute="bottom" id="gbQ-Ya-fTC"/>
                                     <constraint firstItem="f7r-D0-OpV" firstAttribute="top" secondItem="grS-17-jPg" secondAttribute="bottom" id="n5E-7v-Rxw"/>
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="BbZ-do-Osa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BOV-XZ-CaQ"/>
                             <constraint firstAttribute="bottom" secondItem="BbZ-do-Osa" secondAttribute="bottom" id="E1K-0E-KqL"/>
@@ -178,7 +177,56 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+            <point key="canvasLocation" x="168" y="14"/>
+        </scene>
+        <!--Modal View Controller-->
+        <scene sceneID="Azf-kN-Sd8">
+            <objects>
+                <viewController id="Mqd-Yl-k1s" customClass="ModalViewController" customModule="Guess_Your_Card" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" alpha="0.5" contentMode="scaleToFill" id="5Ky-Au-RXK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFn-aS-IzS">
+                                <rect key="frame" x="56.5" y="410.5" width="301" height="75.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="63"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8e-jc-2q4">
+                                <rect key="frame" x="57" y="526" width="300" height="50"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Rxg-1Z-H5i"/>
+                                    <constraint firstAttribute="width" constant="300" id="tZ5-Cd-gMM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Ok">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dismissLayout:" destination="Mqd-Yl-k1s" eventType="touchUpInside" id="LGP-bt-7Ac"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="L8e-jc-2q4" firstAttribute="centerX" secondItem="5Ky-Au-RXK" secondAttribute="centerX" id="4oD-3f-FPn"/>
+                            <constraint firstItem="L8e-jc-2q4" firstAttribute="top" secondItem="NFn-aS-IzS" secondAttribute="bottom" constant="40" id="Hfs-vd-73Q"/>
+                            <constraint firstItem="NFn-aS-IzS" firstAttribute="centerY" secondItem="5Ky-Au-RXK" secondAttribute="centerY" id="YhD-KY-AHU"/>
+                            <constraint firstItem="NFn-aS-IzS" firstAttribute="centerX" secondItem="5Ky-Au-RXK" secondAttribute="centerX" id="uAZ-5a-sdb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xQZ-Jc-eBR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kls-Vt-4yB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805.79710144927537" y="12.723214285714285"/>
         </scene>
     </scenes>
     <resources>
